@@ -18,53 +18,61 @@ body {
 /* Header */
 header {
   background: white;
-  padding: 20px 40px;
+  padding: 15px 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
-header h1 {
-  font-size: 22px;
-  margin: 0;
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo img {
+  height: 40px;
+  width: 40px;
+  border-radius: 10px;
 }
 
 .download-btn {
-  padding: 10px 18px;
+  padding: 8px 16px;
   background: #2563eb;
   color: white;
   text-decoration: none;
   border-radius: 6px;
-  font-weight: 500;
+  font-size: 14px;
 }
 
 .download-btn:hover {
   background: #1e40af;
 }
 
-/* Hero Feature Image */
+/* Hero */
 .hero {
   text-align: center;
-  background: #ffffff;
-  padding: 40px 20px;
+  padding: 50px 20px;
+  background: white;
 }
 
 .hero img {
-  max-width: 100%;
+  max-width: 800px;
+  width: 90%;
   border-radius: 12px;
-  box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
 }
 
 .hero h2 {
   margin-top: 30px;
-  font-size: 32px;
+  font-size: 30px;
 }
 
 .hero p {
   max-width: 700px;
   margin: 15px auto 0;
-  font-size: 18px;
+  font-size: 17px;
   color: #555;
 }
 
@@ -75,9 +83,9 @@ section {
   margin: auto;
 }
 
-h2.section-title {
+.section-title {
   text-align: center;
-  font-size: 28px;
+  font-size: 26px;
   margin-bottom: 40px;
 }
 
@@ -90,19 +98,14 @@ h2.section-title {
 
 .feature-box {
   background: white;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
   transition: 0.3s;
 }
 
 .feature-box:hover {
-  transform: translateY(-5px);
-}
-
-.feature-box h3 {
-  margin-bottom: 15px;
-  font-size: 20px;
+  transform: translateY(-4px);
 }
 
 /* Screenshots */
@@ -114,46 +117,27 @@ h2.section-title {
 
 .screenshots img {
   width: 100%;
-  border-radius: 16px;
+  border-radius: 14px;
   box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-  transition: 0.3s;
-}
-
-.screenshots img:hover {
-  transform: scale(1.03);
-}
-
-/* CTA */
-.cta-section {
-  text-align: center;
-  background: #111827;
-  color: white;
-  padding: 60px 20px;
-}
-
-.cta-section a {
-  margin-top: 20px;
-  display: inline-block;
-  padding: 12px 25px;
-  background: #2563eb;
-  color: white;
-  text-decoration: none;
-  border-radius: 6px;
 }
 
 /* Footer */
 footer {
+  background: #111827;
+  color: white;
+  padding: 30px 20px;
   text-align: center;
-  padding: 25px;
-  background: #0f172a;
-  color: #aaa;
   font-size: 14px;
 }
 
-@media(max-width:768px){
-  .hero h2 {
-    font-size: 24px;
-  }
+footer a {
+  color: #9ca3af;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+footer a:hover {
+  color: white;
 }
 </style>
 </head>
@@ -161,37 +145,40 @@ footer {
 <body>
 
 <header>
-  <h1>Dreamsway AI</h1>
+  <div class="logo">
+    <img src="logo.png" alt="Dreamsway Logo">
+    <strong>Dreamsway AI</strong>
+  </div>
+
   <a class="download-btn" href="https://play.google.com/store/apps/details?id=com.dreamswayai" target="_blank">
-    Download App
+    Download
   </a>
 </header>
 
 <div class="hero">
-  <!-- Feature Graphic -->
-  <img src="feature.png" alt="Dreamsway Feature Graphic">
+  <img src="feature.png" alt="Dreamsway Feature Image">
   <h2>Create Stunning AI Videos & Images</h2>
-  <p>Turn your ideas and photos into cinematic AI creations in seconds using powerful cloud technology.</p>
+  <p>Transform your ideas into cinematic AI visuals with powerful cloud-based generation technology.</p>
 </div>
 
 <section>
-  <h2 class="section-title">Powerful Features</h2>
+  <h2 class="section-title">Features</h2>
   <div class="features">
     <div class="feature-box">
       <h3>AI Video Generator</h3>
-      <p>Transform static photos into dynamic, cinematic videos with smooth AI motion effects.</p>
+      <p>Convert images into smooth animated cinematic videos.</p>
     </div>
     <div class="feature-box">
       <h3>AI Image Creator</h3>
-      <p>Generate stunning AI artwork from simple prompts with multiple creative styles.</p>
+      <p>Create stunning AI artwork from text prompts.</p>
     </div>
     <div class="feature-box">
       <h3>Premium Templates</h3>
-      <p>Choose from anime, fantasy, cinematic and trending styles instantly.</p>
+      <p>Anime, fantasy, cinematic and trending styles.</p>
     </div>
     <div class="feature-box">
-      <h3>Fast Cloud Processing</h3>
-      <p>Experience lightning-fast rendering powered by advanced AI models.</p>
+      <h3>Fast Processing</h3>
+      <p>Cloud-powered high-speed AI rendering.</p>
     </div>
   </div>
 </section>
@@ -206,16 +193,10 @@ footer {
   </div>
 </section>
 
-<div class="cta-section">
-  <h2>Start Creating Today</h2>
-  <p>Download Dreamsway AI and bring your imagination to life.</p>
-  <a href="https://play.google.com/store/apps/details?id=com.dreamswayai" target="_blank">
-    Get it on Google Play
-  </a>
-</div>
-
 <footer>
-  © 2026 Dreamsway AI. All rights reserved.
+  © 2026 Dreamsway AI |
+  <a href="privacy.html">Privacy Policy</a> |
+  <a href="terms.html">Terms & Conditions</a>
 </footer>
 
 </body>
